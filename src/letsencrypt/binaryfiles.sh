@@ -10,7 +10,6 @@ certonly --webroot \
 --staging \
 -d perfectbin.in -d www.perfectbin.in
 
-
 sudo docker run -it --rm \
 -v /docker-volumes/etc/letsencrypt:/etc/letsencrypt \
 -v /docker-volumes/var/lib/letsencrypt:/var/lib/letsencrypt \
@@ -21,6 +20,3 @@ certonly --webroot \
 --email renomanoj10@gmail.com --agree-tos --no-eff-email \
 --webroot-path=/data/letsencrypt \
 -d perfectbin.in -d www.perfectbin.in
-
-
-
