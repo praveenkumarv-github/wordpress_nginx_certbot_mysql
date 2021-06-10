@@ -10,17 +10,6 @@ certonly --webroot \
 --staging \
 -d perfectbin.in -d www.perfectbin.in
 
->>
-error log 
-
-<<<<<<< HEAD
-
-2021/06/10 02:31:50 [emerg] 1#1: PEM_read_bio_DHparams("/etc/ssl/certs/dhparam-2048.pem") 
-failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: DH PARAMETERS)
-
-2021/06/10 02:31:50 [warn] 1#1: the "ssl" directive is deprecated, use the "listen ...ssl"
- directive instead in /etc/nginx/conf.d/default.conf:85
-=======
 sudo docker run -it --rm \
 -v /docker-volumes/etc/letsencrypt:/etc/letsencrypt \
 -v /docker-volumes/var/lib/letsencrypt:/var/lib/letsencrypt \
@@ -31,7 +20,3 @@ certonly --webroot \
 --email renomanoj10@gmail.com --agree-tos --no-eff-email \
 --webroot-path=/data/letsencrypt \
 -d perfectbin.in -d www.perfectbin.in
-
->>>>>>> 6170218320fbea2abbd19e3a34ec833449b50d80
-
-
